@@ -49,3 +49,13 @@ body {
     margin-left: 20px;
   }
   
+  .winner {
+    border: 2px solid green;
+    animation: blinker 1s linear infinite;
+  }
+
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
