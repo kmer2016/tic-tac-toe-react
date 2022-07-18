@@ -95,8 +95,11 @@ function Square(props) {
         let status;
         if (winner) {
             status = winner + ' wins !';
-        } else {
+        } else if(this.state.stepNumber === 9){
+            status = "match Null !"
+        }else{
             status = 'Next player : ' + (this.state.xIsNext ? 'X' : 'O');
+
         }
       return (
         <div className="game">
@@ -116,7 +119,6 @@ function Square(props) {
   
   const root = ReactDOM.createRoot(document.getElementById("root"));
   root.render(<Game />);
-  
 
   function calculateWinner(squares) {
     const lines = [
